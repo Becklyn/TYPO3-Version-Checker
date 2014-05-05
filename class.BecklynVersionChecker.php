@@ -1,11 +1,13 @@
 <?php
 require_once(PATH_tslib.'class.tslib_pibase.php');
 
-class BecklynVersionChecker extends tslib_pibase {
+class BecklynVersionChecker extends tslib_pibase 
+{
     /**
      * Outputs system and version number of TYPO3
      *
      */
+
     function main()
     {
         // prevents that the extension will be cached
@@ -17,7 +19,7 @@ class BecklynVersionChecker extends tslib_pibase {
         echo json_encode(
             array(
                 'system' => "typo3",
-                'version' => $GLOBALS['TYPO_VERSION']
+                'version' => TYPO3_version
             )
         );
     }
